@@ -5,14 +5,15 @@
         document.addEventListener("DOMContentLoaded", function() {
 
 var snowflakes = [];
-var snowflakeCount = 80;
-var snowflakeSize = 20;
+var snowflakeCount = 25;
+var snowflakeSize = 30;
 var snowflakeSpeed = 2;
 var snowflakeOpacity = 0.5;
 var snowflakeColor = '#fff';
 var snowflakeBackground = '#0099ff';
 var snowflakeZIndex = 1;
 var snowflakeContainer = document.createElement('div');
+// snowflakeContainer.style.border = 'dotted';
 snowflakeContainer.style.position = 'fixed';
 snowflakeContainer.style.top = '0';
 snowflakeContainer.style.left = '0';
@@ -26,7 +27,11 @@ function createSnowflake() {
   var snowflake = document.createElement('div');
   var random = Math.random() * 8;
   snowflake.style.position = 'relative';
-  snowflake.style.top = '0';
+  snowflake.style.border = 'dotted';
+  // snowflake.style.border-color = white;
+    snowflake.style.borderColor = "cyan";
+    snowflake.style.borderwidth = '4px';
+    snowflake.style.top = '0';
   snowflake.style.left = Math.random() * 100 + '%';
   snowflake.style.width = random + snowflakeSize + 'px';
   snowflake.style.height = random + snowflakeSize + 'px';
